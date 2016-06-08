@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+
+<html>
+    <head>
+        {# CSS #}
+        <link rel="stylesheet" href="{% static 'student/css/style.css' %}" />
+
+        <title>profile student</title>
+        <meta content="">
+    </head>
+<body>
+    <div id ="content">
+        <div id="info-bar">
+            <div id="profile-panel">
+                <ul>
+                    <li><a href="{% url 'student:home' %}">Home</a></li>
+                    <li><a href="{% url 'student:profile' %}">profile</a></li>
+                    <li><a href="{% url 'student:image_profile' %}">image_profile</a></li>
+                    <li><a href="{% url 'student:change_password' %}">changepassword</a></li>
+                    <li><a href="/">exit</a></li>
+                </ul>
+            </div>
+
+            <div id="main-panel">{% block main-panel %}{% endblock main-panel %}</div>
+        </div>
+    </div>
+</body>
+</html>

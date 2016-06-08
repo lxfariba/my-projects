@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="25">
+            <item index="0" class="java.lang.String" itemvalue="Django" />
+            <item index="1" class="java.lang.String" itemvalue="paramiko" />
+            <item index="2" class="java.lang.String" itemvalue="virtualenv" />
+            <item index="3" class="java.lang.String" itemvalue="reportlab" />
+            <item index="4" class="java.lang.String" itemvalue="dnspython" />
+            <item index="5" class="java.lang.String" itemvalue="pycurl" />
+            <item index="6" class="java.lang.String" itemvalue="xkit" />
+            <item index="7" class="java.lang.String" itemvalue="pycups" />
+            <item index="8" class="java.lang.String" itemvalue="South" />
+            <item index="9" class="java.lang.String" itemvalue="apt-xapian-index" />
+            <item index="10" class="java.lang.String" itemvalue="six" />
+            <item index="11" class="java.lang.String" itemvalue="ufw" />
+            <item index="12" class="java.lang.String" itemvalue="python-apt" />
+            <item index="13" class="java.lang.String" itemvalue="chardet" />
+            <item index="14" class="java.lang.String" itemvalue="configobj" />
+            <item index="15" class="java.lang.String" itemvalue="pexpect" />
+            <item index="16" class="java.lang.String" itemvalue="apturl" />
+            <item index="17" class="java.lang.String" itemvalue="python-debian" />
+            <item index="18" class="java.lang.String" itemvalue="PyICU" />
+            <item index="19" class="java.lang.String" itemvalue="pygobject" />
+            <item index="20" class="java.lang.String" itemvalue="pyxdg" />
+            <item index="21" class="java.lang.String" itemvalue="pyudev" />
+            <item index="22" class="java.lang.String" itemvalue="Pillow" />
+            <item index="23" class="java.lang.String" itemvalue="pycrypto" />
+            <item index="24" class="java.lang.String" itemvalue="BeautifulSoup" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

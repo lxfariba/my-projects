@@ -1,0 +1,88 @@
+{% extends 'manager/base.html' %}
+{% load staticfiles %}
+
+{% block right_panel %}
+ 
+       <a href="{% url 'manager:add' %}">
+       <img id="icon-user"  src="{% static 'manager/images/add_user.png' %}"/>
+       </a>
+   
+
+   {% if form %}
+    <form action="" method="POST">{% csrf_token %}
+       <table>
+           <tr>
+               <th>{{ form.first_name.errors }} {{ form.first_name.label_tag }}</th>
+               <th>{{ form.last_name.errors}} {{ form.last_name.label_tag }}</th>
+           </tr>
+           <tr>
+               <td>{{ form.first_name }}</td>
+               <td>{{ form.last_name }}</td>
+           </tr>
+           <tr>
+               <th>{{ form.student_code.errors }} {{ form.student_code.label_tag }}</th>
+               <th>{{ form.national_code.errors}} {{ form.national_code.label_tag }}</th>
+           </tr>
+
+           <tr>
+               <td>{{ form.student_code }}</td>
+               <td>{{ form.national_code }}</td>
+           </tr>
+           <tr>
+               <th>{{ form.username.errors }} {{ form.username.label_tag }}</th>
+                <th>{{ form.password.errors }} {{ form.password.label_tag }}</th>
+
+           </tr>
+           <tr>
+               <td> {{ form.username }}</td>
+               <td> {{ form.password }}</td>
+           </tr>
+           <tr>
+               <th>{{ form.major.errors }} {{ form.major.label_tag }}</th>
+               <th>{{ form.cellphone_number.errors}} {{ form.cellphone_number.label_tag }}</th>
+           </tr>
+           <tr>
+               <td>{{ form.major }}</td>
+               <td>{{ form.cellphone_number }}</td>
+           </tr>
+
+           <tr>
+               <th>{{ form.address.errors }} {{ form.address.label_tag }}</th>
+           </tr>
+           <tr>
+               <td> {{ form.address }}</td>
+           </tr>
+       </table>
+     <input type="submit" value="save" />
+    </form>
+   {% endif %}
+
+
+    {% if students %}
+     <table id="tb">
+       <tr>
+         <th>First-name</th>
+         <th>Last-name</th>
+         <th>Student-Code</th>
+       </tr>
+       {% for student in students %}
+        <tr>
+          <td>{{student.user.first_name}}</td>
+          <td>{{student.user.last_name}}</td>
+          <td>{{student.student_code}}</td>
+          <td><a href="{% url 'manager:edit_student' student.user.id %}">Edit</a></td>
+          <td><a href="{% url 'manager:change_password' student.user.id%}">Change password</a></td>
+        </tr>
+       {% endfor %}
+     </table>
+   {% endif %}
+
+
+
+  
+    {% if message %} <h4> please enter correct password! </h4>{% endif%}
+        {% if success_pass %}
+          <h4> changed successfully </h4>
+        {% endif %}
+
+{% endblock right_panel %}

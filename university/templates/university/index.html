@@ -1,0 +1,19 @@
+{% extends 'university/base.html' %}
+
+
+
+{% block main %}
+ <div>
+   <h4> Hello Students</h4>
+   {% if courses %}
+    <ul>
+     {% for course in courses %}
+      <li>{{course.name}}</li>
+     {% endfor %}
+    </ul>
+    {% else %}
+      <strong> Sorry!</strong>
+   {% endif %}
+ </div>
+
+{% endblock main %}

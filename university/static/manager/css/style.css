@@ -1,0 +1,86 @@
+ 
+body{
+ background-color:#333333;
+ color:#510; 
+ margin:0;
+ padding:0;
+ 
+}
+
+#content{
+ background-color:#979797;
+}
+
+#tb,td,th{
+  border:1px solid black;
+}
+
+#tb_course,td,th{
+  border:1px solid black;
+ }
+
+#intro-bar {
+  background-color:#fff;
+  color:#510000;
+  width:50%
+  clear:both;
+  height:40px;
+  text-align:center;  
+  border-style:solid;
+  border-color:#510; 
+  border-width:2px;
+}
+
+h4 {
+  color:#510;
+  text-shadow:1px 1px 2px black,0px 0px 25px white;
+  margin-left:30px;
+ }
+#menu-panel{
+  width:13%;
+  float:left;
+  height:400px;
+  background-color:#510000;
+  border-style:solid;
+  
+  margin-right:10px;
+}
+
+#menu-panel ul {
+  padding:0;
+  margin:0;
+}
+
+#menu-panel ul li {
+  list-style:none;
+}
+
+#menu-panel ul li a{
+  text-decoration:none;
+  display:block;
+  width:13%;
+  padding:10px;
+  color:#fff;
+}
+
+#menu-panel ul li a:hover {
+  
+  color:red;
+  text-decoration:none;
+}
+
+#right-panel {
+  width:82%;
+  float:left;
+  height:700px;
+  background-color:#e1d6cb;
+}
+#icon-user {
+ width:40px;
+ height:40px; 
+}
+
+#icon-logout {
+    width: 40px;
+    height:40px;
+}

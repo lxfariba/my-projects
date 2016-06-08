@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+     {# CSS #}
+     <link rel="stylesheet" href="{% static 'manager/css/style.css' %}" />  
+    <title>Manager Page</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+  <div id="content"> 
+   <div id='intro-bar'> university Managment Page! </div>
+     <div id='menu-panel'>
+        <ul>
+           <li><a href="{% url 'manager:index' %}">Home</a></li>
+           <li><a href="{% url 'manager:courses' %}">Courses</a></li>
+           <li><a href="{% url 'manager:students' %}">Students</a></li>
+           <li><a href="{% url 'manager:teachers' %}">Teachers</a></li>
+            <li><a href="/">Exit</a></li>
+        </ul>
+     </div>
+      
+    <div id='right-panel'>{% block right_panel %}{% endblock right_panel %}</div>
+   </div>
+   </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'manager/base.html' %}
+{% load staticfiles %}
+
+{% block right_panel %}
+  <div>
+   
+     <h4> Welcome To Management Page.</h4>
+  </div>
+    <div id ='search'>
+        <form action="search_results.html" method="POST">{% csrf_token %}
+            <input type="text" name="q">
+            <a href = "{% url 'manager:search' %}">Search</a>
+
+        </form>
+    </div>
+{% endblock right_panel %}

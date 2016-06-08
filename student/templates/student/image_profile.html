@@ -1,0 +1,34 @@
+ {% extends 'student/base.html' %}
+
+{% block main-panel %}
+
+    {% if message %}
+        <p>Please upload your picture</p>
+    {% endif %}
+
+    {% if img.image_profile %}
+        <img src ="{{user.student.image_profile.url}}" />
+{#        {{request.user.student.image_profile.url|pprint}}#}
+
+    {% endif %}
+
+    {% if form %}
+        </br></br>
+        <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+        <p>Select an image:<input type="file" name="image_profile"/></p>
+
+
+
+            </br>
+        <input type ="submit" value="SendImage"/>
+            </br>
+
+        </form>
+
+
+    {% endif %}
+
+
+
+{% endblock main-panel %}

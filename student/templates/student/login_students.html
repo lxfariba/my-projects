@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background-color:#e1d6cb">
+
+{% if false %}
+    <p> student-code or password is invalid!</p>
+{% endif %}
+
+
+{% if form %}
+    <div id="log" style="background-color:#510000; height:130px; width:300px; margin-top:220px ;
+    margin-right: 300px;margin-left:500px; margin-bottom: 300px; border-radius: 12px;padding:5px " >
+         <form action="" method="POST">{% csrf_token %}
+             </br>
+             Student code:{{ form.username}}
+             </br></br>
+             Password:{{ form.password}}
+             </br>
+
+             </br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="submit" value="login" style="position:center"/>
+        </form>
+    </div>
+{% endif %}
+
+
+
+</body>
+</html>

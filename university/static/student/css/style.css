@@ -1,0 +1,53 @@
+
+body{
+    background: #d9d9d9;
+    margin: 0px;
+    padding:0px;
+}
+#content{
+    color:#510000;
+}
+
+
+
+#profile-panel{
+    background-color: #510000;
+    width:1200px;
+    height: 70px;
+    margin-top:60px;
+    margin-left: 100px;
+
+
+}
+#profile-panel ul{
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+
+}
+#profile-panel ul li{
+    display: inline-block;
+    padding-top: 20px;
+}
+
+
+
+#profile-panel ul li a{
+    text-decoration:snow;
+    padding:10px;
+    color:#ffffff;
+    font-size: large;
+}
+
+#profile-panel ul li a:hover{
+    color:red;
+
+  }
+#main-panel{
+    background-color:#e1d6cb;
+    width: 1200px;
+    height: 800px;
+    margin-top:-18px;
+    margin-left:100px;
+
+}

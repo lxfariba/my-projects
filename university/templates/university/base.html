@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {# CSS #}
+    <link rel="stylesheet" href="{% static 'university/css/style.css' %}"/>
+
+    <title> MIT University</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+    <div id="main">
+        <div id="header">
+           <div id="login">
+                <a href= "{% url 'student:login' %}">LoginStudent</a>
+           </div>
+        <div id="menu1">
+           <ul>
+             <li><a href = {%  url 'home' %}>Home</a></li>
+             <li><a href="news.html">News</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
+             <li><a href="contact">Contact</a></li>
+           </ul>
+        </div>
+         <h3>Welcome!</h3> 
+          
+        {% block main %}{% endblock main %}
+       
+       <div id="img"><img src="{% static 'university/images/uni.jpg' %}"/></div>
+     </div>
+    </div>
+  </body>
+</html>

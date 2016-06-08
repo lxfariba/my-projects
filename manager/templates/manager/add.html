@@ -1,0 +1,23 @@
+{% extends 'manager/base.html' %}
+{% load staticfiles %}
+
+
+{% block right_panel %}
+ 
+  <div>
+   {% if form %}
+   <form  action="" method="POST">{% csrf_token %}
+     {{form.as_p}}
+     <input type="submit"  value="save" />
+     
+    </form>
+      
+   {% endif %}
+
+   
+   {% if success %}
+     <h3> The student was successfully saved<h3>
+   {% endif%} 
+  </div>
+
+{% endblock right_panel %}

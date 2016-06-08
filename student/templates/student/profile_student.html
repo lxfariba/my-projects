@@ -1,0 +1,72 @@
+{% extends 'student/base.html' %}
+
+{% block main-panel %}
+    {% if form %}
+        </br></br>
+        <form action="" method="POST">{% csrf_token %}
+            <table>
+                <tr>
+                    <th>firstname</th>
+                </tr>
+                    <td>{{ form.first_name }}</td>
+                </tr>
+                <tr>
+                    <th>lastname</th>
+                </tr>
+                <tr>
+                    <td>{{ form.last_name }}</td>
+                </tr>
+                <tr>
+                    <th>student_code</th>
+                </tr>
+                <tr>
+                    <td>{{ form.student_code }}</td>
+                </tr>
+                    <th>national_code</th>
+                </tr>
+                <tr>
+                    <td>{{ form.national_code }}</td>
+                </tr>
+                <tr>
+                    <th>student_code</th>
+                </tr>
+                <tr>
+                    <td>{{ form.student_code }}</td>
+                <tr>
+                    <th>national_code</th>
+                </tr>
+                    <td>{{ form.national_code }}</td>
+                </tr>
+
+                <tr>
+                    <th>cellphone_number</th>
+                </tr>
+                <tr>
+                    <td>{{ form.cellphone_number }}</td>
+                </tr>
+                    <th>major</th>
+                </tr>
+
+                <tr>
+                    <td>{{ form.major }}</td>
+                </tr>
+
+                <tr>
+                    <th>address</th>
+                </tr>
+                <tr>
+                    <td>{{ form.address }}</td>
+                </tr>
+
+
+            </table>
+                <input type="submit" value="save" />
+        </form>
+    {% endif %}
+
+
+{% if success %}
+    <p>update successfully!</p>
+{% endif %}
+
+{% endblock main-panel %}

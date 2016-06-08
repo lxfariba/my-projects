@@ -1,0 +1,11 @@
+{% extends 'manager/base.html' %}
+
+{% block right_panel %}
+  <div>teachers</div>
+  <div>
+   <form action="" method="POST">{% csrf_token %}
+     {{form.as_p}}
+     <input type="submit" value="save teacher">
+   </form>
+  </div>
+{% endblock right_panel %}
